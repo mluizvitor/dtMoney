@@ -52,4 +52,50 @@ export const GlobalStyle = createGlobalStyle`
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+  .react-modal-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .react-modal-content {
+    width: 100%;
+    max-width: 576px;
+    background-color: var(--background);
+    padding: 3rem;
+    position: relative;
+    border-radius: 0.25rem;
+  }
+
+  .react-modal-close {
+    position: absolute;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+
+    transition-property: background-color, filter;
+    transition-duration: 0.2s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      filter: brightness(0.80);
+    }
+  }
 `;
