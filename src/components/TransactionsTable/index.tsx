@@ -1,5 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { api } from "../../services/api";
 import { Container } from "./styles";
+
+interface TransactionProps {
+  id: number;
+  title: string;
+  amount: number;
+  type: string;
+  category: string;
+  createdAt: Date;
+}
 
 export function TransactionsTable() {
   const [transactions, setTransactions] = useState<TransactionProps[]>([]);
@@ -21,18 +31,20 @@ export function TransactionsTable() {
         </thead>
 
         <tbody>
-          <tr>
-            <td>Rendimentos</td>
-            <td className="deposit">R$ 1.000</td>
-            <td>Saúde</td>
-            <td>23/02/2022</td>
-          </tr>
-          <tr>
-            <td>Operação da Lenna</td>
-            <td className="withdraw">- R$ 500,00</td>
-            <td>Saúde</td>
-            <td>23/02/2022</td>
-          </tr>
+          {transactions.map((transaction) => (
+            <tr key={transaction.id}>
+              <td>{transaction.title}</td>
+              <td
+                className={
+                  transaction.type === "deposit" ? "deposit" : "withdraw"
+                }
+              >
+                {transaction.type === "withdraw" && "-"} R$ {transaction.amount}
+              </td>
+              <td>{transaction.category}</td>
+              <td>{transaction.createdAt}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </Container>
