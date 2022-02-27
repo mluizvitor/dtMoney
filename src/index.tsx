@@ -13,7 +13,7 @@ createServer({
       transactions: [
         {
           id: 1,
-          title: "Salário",
+          title: "Salário 🤑️",
           amount: 3500,
           type: "deposit",
           category: "Salário",
@@ -21,7 +21,7 @@ createServer({
         },
         {
           id: 2,
-          title: "Cirurgia da Lenna",
+          title: "Cirurgia da Lenna 😺️",
           amount: 250,
           type: "withdraw",
           category: "Lenna",
