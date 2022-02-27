@@ -14,7 +14,7 @@ createServer({
         {
           id: 1,
           title: "Salário",
-          amount: "3500",
+          amount: 3500,
           type: "deposit",
           category: "Salário",
           createdAt: new Date("2022-02-15 08:00:00"),
@@ -22,7 +22,7 @@ createServer({
         {
           id: 2,
           title: "Cirurgia da Lenna",
-          amount: "250",
+          amount: 250,
           type: "withdraw",
           category: "Lenna",
           createdAt: new Date("2022-02-25 11:00:00"),
