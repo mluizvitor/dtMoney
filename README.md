@@ -18,7 +18,7 @@ categoria e data de criação.
 - Configuração de Fake API com `MirageJS` para teste em desenvolvimento sem depender do back-end;
 - Estilização usando `styled-components`;
 - Compartilhamento de estado elevando-o ao componente pai/mãe ([Lifting State Up](https://reactjs.org/docs/lifting-state-up.html));
-- Introdução à compartilhamento de estados usando hooks e contexto.
+- Criação de hooks personalizados utilizando contexto.
 
 ### O que ainda não é possível fazer:
 
